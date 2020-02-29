@@ -28,7 +28,12 @@ SECRET_KEY = 'h%t&2476ztum3&4w(qq0l)s+wt+^t!@1n0%-cw188hkd4y9=ga'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'api.recommendation.site',
+    '127.0.0.1',
+    'localhost',
+    'www.recommendation.site',
+]
 
 
 # Application definition
@@ -40,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'recommendation.urls'
@@ -80,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
-        'POST': '3306',
+        'POST': 3306,
         'USER': 'LYB',
         'PASSWORD': '123456',
         'NAME': 'recommendation'
@@ -187,3 +195,13 @@ LOGGING = {
         },
     }
 }
+
+AUTH_USER_MODEL = 'users.User'
+#跨域白名单
+CORS_ORIGIN_WHITELIST = (
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+    'http://www.recommendation.site:8080',
+)
+CORS_ALLOW_CREDENTIALS = True #允许携带cookie
+
