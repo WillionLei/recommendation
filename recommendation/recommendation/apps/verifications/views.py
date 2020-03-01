@@ -69,7 +69,9 @@ class SMSCodeView(View):
             logger.error(e)
 
         image_code_server = image_code_server.decode()
-        print(image_code_server)
+
+        print(image_code_server,image_code_client)
+
         if image_code_client.lower() != image_code_server.lower():
             return http.JsonResponse({'code':400,'errmsg':'图形验证码错误'})
 
@@ -81,7 +83,7 @@ class SMSCodeView(View):
         p1.setex('send_flag_%s' % mobile, 60, 1)
         p1.execute()
 
-        ccp_send_sms_code.delay(mobile, sms_code)
+        # ccp_send_sms_code.delay(mobile, sms_code)
         print(sms_code)
 
         return http.JsonResponse({'code':0,
