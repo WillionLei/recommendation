@@ -9,4 +9,7 @@ urlpatterns = [
     url(r'^mobile/(?P<mobile>1[3-9]\d{9})/count/$', views.MobileCountView.as_view()),
     # 用户注册
     url(r'^register/$', views.RegisterView.as_view()),
+    # 用户登录
+    url(r'^login/$',views.UserLoginView.as_view()),
+
 ]

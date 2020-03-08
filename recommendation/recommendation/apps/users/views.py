@@ -1,8 +1,8 @@
-import json
+# import json
 import re
 
 from django import http
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.db.models.sql import constants
 from django.shortcuts import render, redirect
 
@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
 from django_redis import get_redis_connection
+from kombu.utils import json
 from pymysql import DatabaseError
 
 from users.models import User
@@ -59,7 +60,7 @@ class RegisterView(View):
         allow = request.POST.get('allow')
         sms_code_client = request.POST.get('sms_code')
 
-        print(username,password,mobile,allow,sms_code_client)
+        print(username, password, mobile, allow, sms_code_client)
 
         if not all([username, password, mobile, allow, sms_code_client]):
             return http.HttpResponseForbidden('缺少必传参数')
@@ -93,6 +94,7 @@ class RegisterView(View):
             user = User.objects.create_user(username=username,
                                             password=password,
                                             mobile=mobile)
+            user.save()
         except DatabaseError:
             return http.HttpResponse(status=400)
 
@@ -105,3 +107,36 @@ class RegisterView(View):
 
     def get(self, request):
         return render(request, 'register.html')
+
+
+class UserLoginView(View):
+    '''登录接口'''
+    def post(self, request):
+        # dict = json.laods(request.body.decode())
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        remembered = request.POST.get('remembered')
+
+        if not all([username, password, remembered]):
+            return http.HttpResponseForbidden('缺少必传参数')
+
+        if not re.match(r'^[a-zA-Z0-9_]{3,8}$', username):
+            return http.HttpResponseForbidden('用户名错误')
+
+        if not re.match(r'^[0-9a-zA-Z]{8,16}$', password):
+            return http.HttpResponseForbidden('密码错误')
+
+        user = User.objects.get(username=username)
+        print(user,user.password)
+        user = authenticate(request, username=username, password=password)
+
+        if user is None:
+            return http.HttpResponseForbidden('用户不存在')
+
+        login(request, user)
+        if remembered != True:
+            request.session.set_expiry(0)
+        else:
+            request.session.set_expiry(None)
+
+        return http.JsonResponse({'code': 0, 'errmsg':'OK'})
