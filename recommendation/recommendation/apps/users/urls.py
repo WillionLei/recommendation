@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^register/$', views.RegisterView.as_view()),
     # 用户登录
     url(r'^login/$',views.UserLoginView.as_view()),
+    url(r'^logout/$',views.LogoutView.as_view())
 
 ]

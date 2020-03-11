@@ -2,7 +2,7 @@
 import re
 
 from django import http
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.db.models.sql import constants
 from django.shortcuts import render, redirect
 
@@ -101,7 +101,7 @@ class RegisterView(View):
         login(request, user)
 
         response = redirect('/')
-        response.set_cookie('username',username, max_age=constants.USERNAME_COOKIE_EXPIRES)
+        response.set_cookie('username', username, max_age=constants.USERNAME_COOKIE_EXPIRES)
 
         return response
 
@@ -139,4 +139,16 @@ class UserLoginView(View):
         else:
             request.session.set_expiry(None)
 
-        return http.JsonResponse({'code': 0, 'errmsg':'OK'})
+        response = http.JsonResponse({'code':0, 'errmsg':'ok'})
+        response.set_cookie('username',user.username, max_age=3600*24*14)
+
+        return response
+
+
+class LogoutView(View):
+    """退出登录"""
+    def delete(self, request):
+        logout(request)
+        response = http.JsonResponse({'code':0, 'errmsg':'ok'})
+        response.delete_cookie('username')
+        return response
