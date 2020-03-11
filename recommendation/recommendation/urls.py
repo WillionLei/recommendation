@@ -18,7 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # 用户子路由
     url(r'^', include('users.urls')),
+    # 验证码子路由
     url(r'^', include('verifications.urls')),
 
 ]

@@ -2,7 +2,7 @@
 import re
 
 from django import http
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login, logout, authenticate
 from django.db.models.sql import constants
 from django.shortcuts import render, redirect
 
@@ -13,6 +13,7 @@ from django_redis import get_redis_connection
 from kombu.utils import json
 from pymysql import DatabaseError
 
+from recommendation.utils.views import LoginRequiredMixin
 from users.models import User
 
 
@@ -120,16 +121,15 @@ class UserLoginView(View):
         if not all([username, password, remembered]):
             return http.HttpResponseForbidden('缺少必传参数')
 
-        if not re.match(r'^[a-zA-Z0-9_]{3,8}$', username):
-            return http.HttpResponseForbidden('用户名错误')
+        # if not re.match(r'^[a-zA-Z0-9_]{3,8}$', username):
+        #     return http.HttpResponseForbidden('用户名错误')
 
         if not re.match(r'^[0-9a-zA-Z]{8,16}$', password):
             return http.HttpResponseForbidden('密码错误')
 
-        user = User.objects.get(username=username)
-        print(user,user.password)
+        # user = User.objects.get(username=username)
+        # print(user,user.password)
         user = authenticate(request, username=username, password=password)
-
         if user is None:
             return http.HttpResponseForbidden('用户不存在')
 
@@ -152,3 +152,10 @@ class LogoutView(View):
         response = http.JsonResponse({'code':0, 'errmsg':'ok'})
         response.delete_cookie('username')
         return response
+
+
+class UserInfoView(LoginRequiredMixin, View):
+    """用户中心"""
+    def get(self, request):
+        if request.user.is_authenticated():
+            pass

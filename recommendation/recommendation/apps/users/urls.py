@@ -10,7 +10,9 @@ urlpatterns = [
     # 用户注册
     url(r'^register/$', views.RegisterView.as_view()),
     # 用户登录
-    url(r'^login/$',views.UserLoginView.as_view()),
-    url(r'^logout/$',views.LogoutView.as_view())
-
+    url(r'^login/$',  views.UserLoginView.as_view()),
+    # 退出登录
+    url(r'^logout/$', views.LogoutView.as_view()),
+    # 用户中心
+    url(r'^info/$',views.UserInfoView.as_view()),
 ]
