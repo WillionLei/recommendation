@@ -8,4 +8,5 @@ celery_app = Celery('recommendation')
 
 celery_app.config_from_object('celery_tasks.config')
 
-celery_app.autodiscover_tasks(['celery_tasks.sms'])
+celery_app.autodiscover_tasks(['celery_tasks.sms'],
+                              ['celery_tasks.email'])

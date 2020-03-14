@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'corsheaders',
     # 验证码
     'verifications',
+    # 邮箱
+    'emails',
 
 ]
 
@@ -216,3 +218,5 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_CREDENTIALS = True #允许携带cookie
 
 AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend']
+
+EMAIL_VERIFY_URL = 'http://www.recommendation.site:8080/success_verify_email.html?token='

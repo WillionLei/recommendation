@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'^', include('users.urls')),
     # 验证码子路由
     url(r'^', include('verifications.urls')),
+    # 邮件子路有
+    url(r'^', include('emails.urls')),
 
 ]

@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^logout/$', views.LogoutView.as_view()),
     # 用户中心
     url(r'^info/$',views.UserInfoView.as_view()),
+
 ]

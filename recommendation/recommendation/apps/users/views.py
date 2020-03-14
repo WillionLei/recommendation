@@ -6,8 +6,6 @@ from django.contrib.auth import login, logout, authenticate
 from django.db.models.sql import constants
 from django.shortcuts import render, redirect
 
-# Create your views here.
-from django.urls import reverse
 from django.views import View
 from django_redis import get_redis_connection
 from kombu.utils import json
@@ -158,4 +156,15 @@ class UserInfoView(LoginRequiredMixin, View):
     """用户中心"""
     def get(self, request):
         if request.user.is_authenticated():
-            pass
+            # 获取界面需要的数据,进行拼接
+            info_data = {
+                'username': request.user.username,
+                'mobile': request.user.mobile,
+                'email': request.user.email,
+                'email_active': request.user.email_active
+            }
+
+            # 返回响应
+            return http.JsonResponse({'code': 0,
+                                      'errmsg': 'ok',
+                                      'info_data': info_data})
