@@ -51,6 +51,12 @@ INSTALLED_APPS = [
     'verifications',
     # 邮箱
     'emails',
+    # 等级
+    # 'level',
+    # 电影,
+    'films',
+    # 定时任务
+    'django_crontab',
 
 ]
 
@@ -163,6 +169,13 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
+    "history": { # 用户浏览记录
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/3",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
@@ -220,3 +233,20 @@ CORS_ALLOW_CREDENTIALS = True #允许携带cookie
 AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend']
 
 EMAIL_VERIFY_URL = 'http://www.recommendation.site:8080/success_verify_email.html?token='
+
+DEFAULT_FILE_STORAGE = 'recommendation.utils.fastdfs.storage.FDFSStorage'
+
+# 发送邮件的相关设置, 这些设置是当用户没有发送相关字段时, 默认使用的内容:
+# 发送邮件必须进行的设置:
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# 我们使用的 smtp服务器 地址
+EMAIL_HOST = 'smtp.163.com'
+# 端口号
+EMAIL_PORT = 25
+# 下面的内容是可变的, 随后台设置的不同而改变:
+# 发送邮件的邮箱
+EMAIL_HOST_USER = ''
+# 在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD = ''
+# 收件人看到的发件人
+EMAIL_FROM = ''

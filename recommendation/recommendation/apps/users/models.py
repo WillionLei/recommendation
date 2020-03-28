@@ -1,9 +1,13 @@
+from BaseModel.BaseModel import BaseModel
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 # Create your models here.
+from django.utils import timezone
 from itsdangerous import TimedJSONWebSignatureSerializer, BadData
+
+from films.models import Film
 
 
 class User(AbstractUser):
@@ -13,6 +17,7 @@ class User(AbstractUser):
     # 用于记录邮箱是否激活, 默认为 False: 未激活
     email_active = models.BooleanField(default=False,
                                        verbose_name='邮箱验证状态')
+    birthday = models.DateField(default=timezone.now, verbose_name='生日')
 
     class Meta:
         db_table = 'tb_users'
@@ -55,18 +60,15 @@ class User(AbstractUser):
             # 如果存在则直接返回
             return user
 
-# def generate_veify_email(self):
-#     """
-#     生成邮箱验证链接
-#     :param self: 当前登录用户
-#     :return: verify_url
-#     """
-#     # 调用itsdangerous中的类，生成对象，有限期：5分钟
-#     serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY,
-#                                                 expires_in=60*5)
-#
-#     data = {'user_id': self.id, 'email': self.email}
-#     # 生成token，byte类型 解码为 str:
-#     token = serializer.dumps(data).decode()
-#     verify_url = settings.EMAIL_VERIFY_URL + token
-#     return verify_url
+
+class Collection(BaseModel):
+    """
+    用户收藏
+    """
+    user = models.ForeignKey(User,
+                             on_delete=models.CASCADE,
+                             related_name='collections',
+                             verbose_name='用户')
+    film = models.ForeignKey(Film,on_delete=models.CASCADE,
+                             related_name='collections_film',
+                             verbose_name='电影')

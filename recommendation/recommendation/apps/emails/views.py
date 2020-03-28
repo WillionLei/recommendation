@@ -57,3 +57,5 @@ class VerifyEmailView(View):
 
         return http.JsonResponse({'code':0,
                                   'errmsg':'ok'})
+
+

@@ -24,5 +24,9 @@ urlpatterns = [
     url(r'^', include('verifications.urls')),
     # 邮件子路有
     url(r'^', include('emails.urls')),
+    # 等级子路有
+    # url(r'^', include('level.urls')),
+    # 电影子路有
+    url(r'^', include('films.urls')),
 
 ]

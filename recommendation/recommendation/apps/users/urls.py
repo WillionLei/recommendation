@@ -14,6 +14,14 @@ urlpatterns = [
     # 退出登录
     url(r'^logout/$', views.LogoutView.as_view()),
     # 用户中心
-    url(r'^info/$',views.UserInfoView.as_view()),
+    url(r'^info/$', views.UserInfoView.as_view()),
+    # 修改密码
+    url(r'^password/$', views.ChangePwdView.as_view()),
+    # 生日
+    url(r'^birthday/$', views.ChangeBirthday.as_view()),
+    # 收藏
+    url(r'^collection/$', views.AddCollections.as_view()),
+    # 浏览记录
+    url(r'^histroies/$', views.HistoryView.as_view()),
 
 ]
