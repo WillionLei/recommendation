@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1294018c-444c-42d8-9243-e0676aaad597" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/emails/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/emails/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/settings/dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommendation/recommendation/apps/films/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/recommendation/apps/films/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,23 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="327" column="19" selection-start-line="327" selection-start-column="19" selection-end-line="327" selection-end-column="19" />
-              <folding>
-                <element signature="e#14#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/urls.py">
+        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="195">
+              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="14" selection-end-column="50" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -42,37 +27,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/settings/dev.py">
+        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="174" column="20" lean-forward="true" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
+            <state relative-caret-position="313">
+              <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
               <folding>
-                <element signature="e#319#328#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/models.py">
+        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="238">
+              <caret line="297" column="37" lean-forward="true" selection-start-line="297" selection-start-column="37" selection-end-line="297" selection-end-column="37" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#14#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="555">
+              <caret line="37" column="69" lean-forward="true" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/levels/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/levels/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -110,14 +113,17 @@
         <option value="$PROJECT_DIR$/recommendation/recommendation/apps/contents/urls.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/apps/contents/models.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/urls.py" />
-        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py" />
-        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/utils/fastdfs/client.conf" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/apps/emails/views.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/apps/users/models.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/settings/dev.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/apps/users/urls.py" />
         <option value="$PROJECT_DIR$/recommendation/recommendation/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/levels/models.py" />
+        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/levels/views.py" />
+        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py" />
+        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py" />
+        <option value="$PROJECT_DIR$/recommendation/recommendation/apps/films/views.py" />
       </list>
     </option>
   </component>
@@ -128,9 +134,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="716" />
-    <option name="y" value="72" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
     <option name="width" value="564" />
     <option name="height" value="696" />
   </component>
@@ -156,19 +162,6 @@
               <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="celery_tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="celery_tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="email" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -177,22 +170,6 @@
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="emails" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="films" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
@@ -201,13 +178,6 @@
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recommendation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -299,12 +269,12 @@
       <updated>1582896522699</updated>
       <workItem from="1582941292911" duration="289000" />
       <workItem from="1582941770704" duration="103000" />
-      <workItem from="1582941876184" duration="50879000" />
+      <workItem from="1582941876184" duration="57002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51271000" />
+    <option name="totallyTimeSpent" value="57394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,10 +286,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="716" y="72" width="564" height="696" extended-state="0" />
+    <frame x="67" y="25" width="1213" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916527" weight="0.5722656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916527" visible="true" weight="0.25236866" />
       <window_info id="Structure" order="1" sideWeight="0.5008347" side_tool="true" weight="0.409009" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -329,7 +299,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3460145" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31886476" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32888147" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32888147" />
@@ -360,20 +330,6 @@
     <SUITE FILE_PATH="coverage/recommendation$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584157368062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm64.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/recommendation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -598,24 +554,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/recommendation/utils/fastdfs/client.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -683,26 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/recommendation/settings/dev.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -715,20 +637,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="223">
+          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/levels/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/levels/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="327" column="19" selection-start-line="327" selection-start-column="19" selection-end-line="327" selection-end-column="19" />
+        <state relative-caret-position="238">
+          <caret line="297" column="37" lean-forward="true" selection-start-line="297" selection-start-column="37" selection-end-line="297" selection-end-column="37" />
           <folding>
             <element signature="e#14#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/recommendation/apps/films/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="69" lean-forward="true" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
